@@ -1,0 +1,12 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin padmar {
+margin: 0;
+padding: 0;
+}
+
+

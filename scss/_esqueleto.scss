@@ -1,0 +1,1141 @@
+@import "../scss/mixin";
+@import "../scss/variables";
+
+
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+  * {
+    @include padmar;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  main {
+    background-color: nth($color, 2);
+  }
+  
+  //index
+  .body-index {
+    @include padmar;
+    background-color: blanchedalmond;
+    height: 100vh;
+    color: nth($color, 1);
+  }
+  
+  .header-index {
+    @include flex;
+    position: fixed;
+    width: nth($medidas, 2);
+    top: 5%;
+  
+    .navbar-index {
+      position: fixed;
+      margin-top: nth($medidas, 1);
+      padding: nth($medidas, 1);
+      z-index: 999;
+      padding-left: 10%;
+  
+      a {
+        color: nth($color, 3);
+        ul {
+        @include flex;
+          margin-right: nth($medidas, 3);
+          gap: 20px;
+          font-size: 24px;
+        }
+        a:hover {
+          color: gray;
+        }
+      }
+  
+      .index-li {
+        display: none;
+      }
+    }
+  }
+  .logo-index {
+    width: 300px;
+    margin-top: nth($medidas, 3);
+  }
+  
+  .main-index {
+    background-image: url("/IMG/Secciones/fondo\ a\ difuminar.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 50px !important;
+    height: nth($medidas, 4);
+    padding-top: 50px;
+  
+    .conteiner {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: nth($medidas, 2);
+      height: 85%;
+    }
+    .h2-index {
+      background: 50% 100%/50% 50% no-repeat
+        radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 5vw;
+      font-family: "Source Sans Pro", sans-serif;
+      -webkit-animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+      animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+    }
+    @-webkit-keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @-webkit-keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+  }
+  
+  //camperas
+  .body-camperas {
+    @include padmar;
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: nth($medidas, 4);
+    color: #fff;
+  }
+  
+  .header-camperas {
+    display: flex;
+    align-items: flex-start;
+    background-color: nth($color, 3);
+    
+  }
+  .logo-camperas {
+    height: 50px;
+    margin-right: 2rem;
+  }
+  .nav-camperas {
+    flex-grow: 1;
+  
+    .nav-linkscamperas a {
+      color: nth($color, 1);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s;
+    }
+  }
+  
+  .nav-linkscamperas li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .campera-1 {
+    width: 20%;
+  }
+  
+  .main-camperas {
+  margin-left: 30%;
+  width: 35%;
+  height: 85%;
+  padding-top: 20px;
+  }
+  
+  .consulta-camperas {
+  display: flex;
+  justify-content: center;
+  color: nth($color, 3);
+  
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  }
+  
+  
+  .parrafo-camperas H1 {
+  color: nth($color, 4);
+  }
+  
+  H1 {
+    @include padmar;
+    @include flex;
+    margin-top: nth($medidas, 3);
+    margin-right: 10vh;
+  }
+  
+  .sec-campera {
+    margin-bottom: 20px;
+  }
+  
+  // PARKA
+  
+  .main-parka {
+    background-color: nth($color, 2);
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .grid-container div img {
+    width: nth($medidas, 2);
+    height: nth($medidas, 2);
+    object-fit: cover;
+    
+  }
+  
+  .grid-parka {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 4fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+    overflow-x: hidden;
+    }
+  
+    div .grid-item img {
+      width: 90%;
+      height: auto;
+      margin-left: 50px;
+      margin-top: 10px;
+    }
+  
+  
+    // chalecos
+  
+  
+  
+    .sec-chalecos {
+      display: grid;
+grid-template-columns: 2fr;
+grid-template-rows: repeat(6, 2fr);
+grid-column-gap: 40px;
+grid-row-gap: 10px;
+      
+      div {
+      width: 77%;
+      height: nth($medidas, 2);
+      margin-left: 23%; 
+      }
+    }
+
+    .sec-chalecos div img {
+      width: 50rem;
+      height: auto;
+    }
+  // footer general
+  footer {
+    @include padmar;
+    bottom: 0;
+    width: nth($medidas, 2);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: nth($color, 1);
+    text-align: center;
+    padding: 18px 0;
+    z-index: 1000;
+    @include flex;
+
+     img {
+      width: 26px;
+      height: 20px;
+      margin-bottom: 20px;
+     }
+     .logo-insta {
+      width: 50px;
+     }
+  }
+}
+
+@media (min-width: 863px) and (max-width: 1279px) {
+  * {
+    @include padmar;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  main {
+    background-color: nth($color, 2);
+  }
+  
+  //index
+  .body-index {
+    @include padmar;
+    background-color: blanchedalmond;
+    height: nth($medidas, 4);
+    color: nth($color, 1);
+  }
+  
+  .header-index {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: nth($medidas, 2);
+    align-items: center;
+    top: 5%;
+  
+    .navbar-index {
+      position: fixed;
+      margin-top: nth($medidas, 1);
+      padding: nth($medidas, 1);
+      z-index: 999;
+      padding-left: 10%;
+  
+      a {
+        color: black;
+        ul {
+            @include flex;
+          margin-right: 100px;
+          gap: 20px;
+          font-size: 24px;
+          
+        }
+        a:hover {
+          color: gray;
+        }
+      }
+  
+      .index-li {
+        display: none;
+      }
+    }
+  }
+  .logo-index {
+    width: 300px;
+    margin-top: 100px;
+  }
+  
+  .main-index {
+    background-image: url("/IMG/Secciones/fondo\ a\ difuminar.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 50px !important;
+    height: nth($medidas, 4);
+    padding-top: 50px;
+  
+    .conteiner {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: nth($medidas, 2);
+      height: 85%;
+    }
+    .h2-index {
+      background: 50% 100%/50% 50% no-repeat
+        radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 5vw;
+      font-family: "Source Sans Pro", sans-serif;
+      -webkit-animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+      animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+    }
+    @-webkit-keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @-webkit-keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+  }
+  
+  //camperas
+  .body-camperas {
+    @include padmar;
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: nth($medidas, 4);
+    color: #fff;
+  }
+  
+  .header-camperas {
+    display: flex;
+    align-items: flex-start;
+    background-color: nth($color, 4);
+    
+  }
+  .logo-camperas {
+    height: 50px;
+    margin-right: 2rem;
+  }
+  .nav-camperas {
+    flex-grow: 1;
+  
+    .nav-linkscamperas a {
+      color: nth($color, 1);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s;
+    }
+  }
+  
+  .nav-linkscamperas li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .campera-1 {
+    width: 20%;
+  }
+  
+  .main-camperas {
+  margin-left: 15rem;
+  width: 36rem;
+  height: 45rem;
+  padding-top: 20px;
+  }
+  
+  .consulta-camperas {
+  display: flex;
+  justify-content: center;
+  color: #333;
+  
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  }
+  
+  
+  .parrafo-camperas H1 {
+  color: nth($color, 4);
+  }
+  
+  H1 {
+    @include padmar;
+    @include flex;
+    margin-top: nth($medidas, 3);
+    margin-right: 10vh;
+    
+  }
+  
+  .sec-campera {
+    margin-bottom: 20px;
+  }
+  
+  // PARKA
+  
+  .main-parka {
+    background-color: nth($color, 2);
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .grid-container div img {
+    width: nth($medidas, 2);
+    height: nth($medidas, 2);
+    object-fit: cover;
+    
+  }
+  
+  .grid-parka {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 4fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+    overflow-x: hidden;
+    padding: 30px;
+    }
+  
+    div .grid-item img {
+      width: 90%;
+      height: auto;
+      margin-left: 50px;
+      margin-top: 10px;
+    }
+  
+  
+    // chalecos
+  
+    .sec-chalecos {
+      display: grid;
+grid-template-columns: 2fr;
+grid-template-rows: repeat(6, 2fr);
+grid-column-gap: 40px;
+grid-row-gap: 10px;
+      
+      div {
+      width: 77%;
+      height: nth($medidas, 2);
+      margin-left: 23%; 
+      }
+    }
+
+    .sec-chalecos div img {
+      width: 36rem;
+      height: auto;
+    }
+  // footer general
+  footer {
+    @include padmar;
+    bottom: 0;
+    width: nth($medidas, 2);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: nth($color, 1);
+    text-align: center;
+    padding: 18px 0;
+    z-index: 1000;
+    @include flex;
+     img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 20px;
+     }
+     .logo-insta {
+      width: 50px;
+     }
+  }
+}
+
+
+//tablet
+
+@media (min-width: 768px) and (max-width: 862px) {
+  * {
+    @include padmar;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  main {
+    background-color: nth($color, 2);
+  }
+  
+  //index
+  .body-index {
+    @include padmar;
+    background-color: blanchedalmond;
+    height: nth($medidas, 4);
+    color: nth($color, 1);
+  }
+  
+  .header-index {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: nth($medidas, 2);
+    align-items: center;
+    top: 5%;
+  
+    .navbar-index {
+      position: fixed;
+      margin-top: 0;
+      padding: 0;
+      z-index: 999;
+      padding-left: 10%;
+  
+      a {
+        color: nth($color, 3);
+        ul {
+            @include flex;
+          margin-right: nth($medidas, 3);
+          gap: 20px;
+          font-size: 24px;
+          
+        }
+        a:hover {
+          color: gray;
+        }
+      }
+  
+      .index-li {
+        display: none;
+      }
+    }
+  }
+  .logo-index {
+    width: 300px;
+    margin-top: nth($medidas, 3);
+  }
+  
+  .main-index {
+    background-image: url("/IMG/Secciones/fondo\ a\ difuminar.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 50px !important;
+    height: nth($medidas, 4);
+    padding-top: 50px;
+  
+    .conteiner {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: nth($medidas, 2);
+      height: 85%;
+    }
+    .h2-index {
+      background: 50% 100%/50% 50% no-repeat
+        radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 5vw;
+      font-family: "Source Sans Pro", sans-serif;
+      -webkit-animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+      animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+    }
+    @-webkit-keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @-webkit-keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+  }
+  
+  //camperas
+  .body-camperas {
+    @include padmar;
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: nth($medidas, 4);
+    color: nth($color, 1);
+  }
+  
+  .header-camperas {
+    display: flex;
+    align-items: flex-start;
+    background-color: nth($color, 4);
+    
+  }
+  .logo-camperas {
+    height: 50px;
+    margin-right: 2rem;
+  }
+  .nav-camperas {
+    flex-grow: 1;
+  
+    .nav-linkscamperas a {
+      color: nth($color, 1);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s;
+    }
+  }
+  
+  .nav-linkscamperas li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .campera-1 {
+    width: 20%;
+  }
+  
+  .main-camperas {
+  margin-left: 8rem;
+  width: 36rem;
+  height: 45rem;
+  padding-top: 20px;
+  }
+  
+  .consulta-camperas {
+  display: flex;
+  justify-content: center;
+  color: nth($color, 4);
+  
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  }
+  
+  
+  .parrafo-camperas H1 {
+  color: nth($color, 4);
+  }
+  
+  H1 {
+    @include padmar;
+    @include flex;
+    margin-top: nth($medidas, 3);
+    margin-right: 10vh;
+    
+  }
+  
+  .sec-campera {
+    margin-bottom: 20px;
+  }
+  
+  // PARKA
+  
+  .main-parka {
+    background-color: nth($color, 2);
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .grid-container div img {
+    width: nth($medidas, 2);
+    height: nth($medidas, 2);
+    object-fit: cover;
+    
+  }
+  
+  .grid-parka {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 4fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+    overflow-x: hidden;
+    }
+  
+    div .grid-item img {
+      width: 85%;
+      height: auto;
+      margin-left: 50px;
+      margin-top: 10px;
+    }
+  
+  
+    // chalecos
+  
+  
+  .sec-chalecos {
+    display: grid;
+grid-template-columns: 2fr;
+grid-template-rows: repeat(6, 2fr);
+grid-column-gap: 40px;
+grid-row-gap: 10px;
+    
+    div {
+    width: 77%;
+    height: nth($medidas, 2);
+    margin-left: 23%; 
+    }
+  }
+
+  .sec-chalecos div img {
+    width: 26rem;
+    height: auto;
+  }
+  // footer general
+  footer {
+    @include padmar;
+    bottom: 0;
+    width: nth($medidas, 2);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: nth($color, 1);
+    text-align: center;
+    padding: 18px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 20px;
+     }
+     .logo-insta {
+      width: 50px;
+     }
+  }
+}
+
+
+//mobile
+
+@media (min-width: 320px) and (max-width: 767px) {
+  * {
+    @include padmar;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  main {
+    background-color: nth($color, 2);
+  }
+  
+  //index
+  .body-index {
+    @include padmar;
+    background-color: blanchedalmond;
+    height: nth($medidas, 4);
+    color: nth($color, 1);
+  }
+  
+  .header-index {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: nth($medidas, 2);
+    align-items: center;
+    top: 5%;
+  
+    .navbar-index {
+      position: fixed;
+      margin-top: 0;
+      padding: 0;
+      z-index: 999;
+      padding-left: 10%;
+  
+      a {
+        color: nth($color, 3);
+        ul {
+            @include flex;
+          margin-right: nth($medidas, 3);
+          gap: 20px;
+          font-size: 24px;
+          
+        }
+        a:hover {
+          color: gray;
+        }
+      }
+  
+      .index-li {
+        display: none;
+      }
+    }
+  }
+  .logo-index {
+    width: 300px;
+    margin-top: nth($medidas, 3);
+  }
+  
+  .main-index {
+    background-image: url("/IMG/Secciones/fondo\ a\ difuminar.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 50px !important;
+    height: nth($medidas, 4);
+    padding-top: 50px;
+  
+    .conteiner {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: nth($medidas, 2);
+      height: 85%;
+    }
+    .h2-index {
+      background: 50% 100%/50% 50% no-repeat
+        radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 5vw;
+      font-family: "Source Sans Pro", sans-serif;
+      -webkit-animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+      animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+    }
+    @-webkit-keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @-webkit-keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+  }
+  
+  //camperas
+  .body-camperas {
+    @include padmar;
+    background-color: nth($color, 2);
+    height: 100vh;
+    color: nth($color, 1);
+  }
+  
+  .header-camperas {
+    display: flex;
+    align-items: flex-start;
+    background-color: nth($color, 4);
+    
+  }
+  .logo-camperas {
+    height: 50px;
+    margin-right: 2rem;
+  }
+  .nav-camperas {
+    flex-grow: 1;
+  
+    .nav-linkscamperas a {
+      color: nth($color, 1);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s;
+    }
+  }
+  
+  .nav-linkscamperas li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .campera-1 {
+    width: 20%;
+  }
+  
+  .main-camperas {
+  
+  margin: 0 auto;
+  padding: 0 10px;
+  }
+
+  .parrafo-camperas h1 {
+    font-size: 6vw;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .carousel {
+    width: nth($medidas, 2);
+    height: auto;
+  }
+
+  .carousel-inner img {
+    width: nth($medidas, 2);
+    height: auto;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 50%, 50%;
+  }
+
+  .carousel-indicators {
+    bottom: -20px;
+  }
+
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .consulta-camperas {
+    @include flex;
+    margin-top: 20px;
+    font-size: 4vw;
+  img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  }
+  
+  
+  .parrafo-camperas H1 {
+  color: nth($color, 4);
+  }
+  
+  H1 {
+    @include padmar;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: nth($medidas, 3);
+   
+    
+  }
+  
+  .sec-campera {
+    margin-bottom: 20px;
+  }
+  
+  // PARKA
+  
+  .main-parka {
+    background-color: nth($color, 2);
+    background-image: url("/IMG/Camperas/fondo-main-camperas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: nth($medidas, 2);
+  }
+  
+  .grid-container div img {
+    width: nth($medidas, 2);
+    height: nth($medidas, 2);
+    object-fit: cover;
+    
+  }
+  
+  .grid-parka {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 8px;
+    overflow-x: hidden;
+    }
+  
+    div .grid-item {
+      margin-bottom: 27%;
+    }
+
+
+    div .grid-item img {
+      width: 85%;
+      height: auto;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+  
+  
+    // chalecos
+  
+    .sec-chalecos {
+      display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: repeat(6, 2fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 10px;
+      
+      div {
+      width: 77%;
+      height: nth($medidas, 2);
+      margin-left: 23%; 
+      margin-bottom: 27%;
+      }
+    }
+  
+    .sec-chalecos div img {
+      width: 73%;
+      height: auto;
+    
+    }
+  // footer general
+  footer {
+    width: nth($medidas, 2);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: nth($color, 1);
+    text-align: center;
+    padding: 18px 0;
+    z-index: 1000;
+    @include flex;
+    position: fixed;
+    bottom: 0;
+  }
+
+  footer img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+  .logo-insta {
+    width: 50px;
+   }
+}
